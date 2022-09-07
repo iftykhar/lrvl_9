@@ -14,7 +14,6 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(1)->create();
-        $this->call(AdminSeeder::class);
+        \App\Models\User::factory(1)->create(['is_admin' => true]);
     }
 }
